@@ -1,0 +1,150 @@
+<!-- 引入css -->
+<link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/dist/css/bid_request_list.min.css">
+<!-- 编写HTML片段 -->
+<section id="bid-request" class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="panel-group  el-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <span role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                投资项目
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">投资项目1</div>
+                        <div class="panel-body">投资项目2</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                借款项目
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingTwo">
+                        <div class="panel-body"><a href="/views/bidrequestlist/bidrequestlist.html">借款项目</a> </div>
+                        <div class="panel-body"><a href="#">还款明细</a> </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                我的账户
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingThree">
+                        <div class="panel-body">账户信息</div>
+                        <div class="panel-body">实名认证</div>
+                        <div class="panel-body">银行卡管理</div>
+                        <div class="panel-body">登记记录</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                资产详情
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingFour">
+                        <div class="panel-body">账户流水</div>
+                        <div class="panel-body">充值明细</div>
+                        <div class="panel-body">提现记录</div>
+                        <div class="panel-body">收款明细</div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                个人资料
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingFive">
+                        <div class="panel-body">账户信息</div>
+                        <div class="panel-body">实名认证</div>
+                        <div class="panel-body">银行卡管理</div>
+                        <div class="panel-body">登记记录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">还款计划</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>期数</th>
+                            <th>金额(元) </th>
+                            <th> 本金(元) </th>
+                            <th>利息(元) </th>
+                            <th>状态</th>
+                            <th> 详情</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2018-01-02</td>
+                            <td>12</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>1000</td>
+                            <td>
+                                <!-- <label class="text-muted">待发布</label> -->
+                                <!-- <label class="text-success">招标中</label> -->
+                                <!-- <label class="text-info">满标未审核</label> -->
+                                <label class="text-primary">还款中</label>
+                                <!-- <label class="text-danger">招标拒绝</label> -->
+                            </td>
+                            <td><a target="_blank" href="#">江湖救急</a><span class="label label-primary">信</span></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2018-01-02</td>
+                            <td>6</td>
+                            <td>1000</td>
+                            <td>900</td>
+                            <td>100</td>
+                            <td>
+                                <!-- <label class="text-muted">待发布</label> -->
+                                <label class="text-success">还款完成</label>
+                                <!-- <label class="text-info">满标未审核</label> -->
+                                <!-- <label class="text-primary">还款中</label> -->
+                                <!-- <label class="text-danger">招标拒绝</label> -->
+                            </td>
+                            <td><a target="_blank" href="#">江湖救急</a><span class="label label-primary">信</span></td>
+                            <td><a href="#">马上还款</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 引入js -->
+<script src="/lib/jquery/dist/jquery.js"></script>
+<script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+<!-- <script src="/dist/js/index-yx.min.js"></script> -->

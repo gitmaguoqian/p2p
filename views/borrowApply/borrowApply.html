@@ -1,0 +1,278 @@
+<style>
+    #borrowApply .credit {
+        background: #F4F8FA;
+        height: 120px;
+        border-left: 2px solid #0099DD;
+        padding: 35px 20px 35px;
+        line-height: 40px;
+    }
+    #borrowApply .borrow {
+        color: #333;
+        font-weight: normal;
+        font-size: 20px;
+        padding: 30px 0px 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    #borrowApply .el-recharge-form{position: relative;margin-top: 30px;}
+    #borrowApply .el-borrow-form-tip{
+			width: 300px;
+			border-radius: 3px;
+			border:1px solid #ddd;
+			box-shadow: 1px 1px 20px #ddd;
+			padding:20px 30px;
+			position: absolute;
+			top:10px;
+			right: 100px;
+            line-height: 35px;
+		}
+        .panel-body:hover {
+        background: #0096e0;
+    }
+
+    .panel-body:hover a {
+        color: #fff;
+    }
+</style>
+<!-- 信用借款 -->
+<section id="borrowApply" class="container">
+    <div class="row el-parent -active">
+        <!-- 左边 -->
+        <div class="col-sm-3 el-left">
+            <div class="panel-group  el-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <!-- 投资项目 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <span role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                投资项目
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body"><a href="#">股票基金</a> </div>
+                        <div class="panel-body"><a href="#">国债货币</a> </div>
+                        <div class="panel-body"><a href="#/borrow2">各种贷款</a> </div>
+                    </div>
+                </div>
+                <!-- 借款项目 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                借款项目
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body"><a href="#">借款项目</a></div>
+                        <div class="panel-body"><a href="#">还款明细</a></div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                我的账户
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse " role="tabpanel"
+                        aria-labelledby="headingThree">
+                        <div class="panel-body "><a href="#">账户信息</a></div>
+                        <div class="panel-body"><a href="#">实名认证</a> </div>
+                        <div class="panel-body"><a href="#">银行卡管理</a> </div>
+                        <div class="panel-body"><a href="#">登记记录</a> </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                资产详情
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel"
+                        aria-labelledby="headingFour">
+                        <div class="panel-body"><a href="#">账户流水</a> </div>
+                        <div class="panel-body"><a href="#">充值明细</a> </div>
+                        <div class="panel-body"><a href="#">提现记录</a> </div>
+                        <div class="panel-body"><a href="#">收款明细</a> </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFive">
+                        <h4 class="panel-title">
+                            <span class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                                href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                个人资料
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel"
+                        aria-labelledby="headingFive">
+                        <div class="panel-body"><a href="#">账户信息</a> </div>
+                        <div class="panel-body"><a href="#/realAuth">实名认证</a> </div>
+                        <div class="panel-body"><a href="#">银行卡管理</a> </div>
+                        <div class="panel-body"><a href="#/borrow_info">登记记录</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右边 -->
+        <div class="col-sm-9">
+            <!-- 信用借款 -->
+            <div class="credit">
+                <!-- 标题 -->
+                <h3 class="text-primary">信用借款</h4>
+                    <span class="text-info">授信额度： <strong class="text-warning">2000</strong> </span>
+                    <span class="text-info col-md-offset-1">可借金额：<strong class="text-warning">2000</strong> </span>
+            </div>
+            <!-- 借款信息 -->
+            <div class="borrow">
+                借款信息
+                <label class="label label-primary">信用标</label>
+            </div>
+            <!-- form表单 -->
+            <form id="rechargeForm" class="form-horizontal el-recharge-form" action="#" method="post">
+                <!-- 借款金额 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        借款金额
+                    </label>
+                    <div class="col-sm-3  input-group">
+                        <input class="form-control" name="bidRequestAmount" />
+                        <span class="input-group-addon">元</span>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        借款利息
+                    </label>
+                    <div class="col-sm-3  input-group">
+                        <input class="form-control" name="" />
+                        <span class="input-group-addon">%</span>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        借款期限
+                    </label>
+                    <div class="col-sm-3 input-group">
+                        <select class="form-control" name="monthes2Return">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="9">9</option>
+                            <option value="12">12</option>
+                            <option value="24">24</option>
+                        </select>
+                        <span class="input-group-addon">月</span>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        还款方式
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="0" checked="checked" name="inlineRadioOptions" />
+                        按月分期
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="1" name="inlineRadioOptions" />
+                        按月到期
+                    </label>
+                </div>
+                <!-- 5 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        最小投标
+                    </label>
+                    <div class="col-sm-3  input-group">
+                        <input class="form-control" name="minBidAmount" />
+                        <span class="input-group-addon">元</span>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        投标奖金
+                    </label>
+                    <div class="col-sm-3  input-group">
+                        <input class="form-control" name="totalRewardAmount" value="0" />
+                        <span class="input-group-addon">%</span>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        招标天数
+                    </label>
+                    <div class="col-sm-3 input-group">
+                        <select class="form-control" name="disableDays">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <span class="input-group-addon">天</span>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        借款标题
+                    </label>
+                    <div class="col-sm-6 input-group">
+                        <input name="title" class="form-control" />
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">
+                        借款描述
+                    </label>
+                    <div class="col-sm-6  input-group">
+                        <textarea name="description" rows="4" class="form-control" style="resize: none;"></textarea>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="form-group">
+                    <button class="btn btn-primary col-lg-offset-3" type="submit" data-loading-text="提交">
+                        提交申请
+                    </button>
+                </div>
+                <!-- 相关费用 -->
+                <div class="el-borrow-form-tip">
+                        <h4>相关费用</h4>
+                        <p>
+                            <span class="text-info">利息</span>
+                            <span class="el-borrow-cost" id="cost01">--</span>
+                        </p>
+                        <p>
+                            <span class="text-info">奖金</span>
+                            <span class="el-borrow-cost" id="cost02">--</span>
+                        </p>
+                        <p>
+                            <span class="text-info">管理费</span>
+                            <span class="el-borrow-cost" id="cost03">--</span>
+                        </p>
+                </div>
+            </form>
+        </div>
+</section>
